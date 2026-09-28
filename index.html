@@ -62,9 +62,34 @@ h1,h2,h3{font-family:Archivo,system-ui,sans-serif;font-weight:800;margin:0;line-
 
 /* otwarcie */
 .otw{padding-block:clamp(36px,5.5vw,80px)}
-.otw .w{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(28px,5vw,70px);align-items:end}
-@media (max-width:900px){.otw .w{grid-template-columns:1fr;gap:30px;align-items:start}}
+.otw .w{display:grid;grid-template-columns:1.12fr .88fr;
+  grid-template-areas:"tyt foto" "reszta foto";
+  column-gap:clamp(28px,5vw,70px);align-items:start}
+.tyt{grid-area:tyt}
+.reszta{grid-area:reszta}
+.foto{grid-area:foto;margin:0;align-self:stretch;display:flex;flex-direction:column}
+.foto img{width:100%;height:100%;min-height:400px;object-fit:cover;flex:1}
+@media (max-width:900px){
+  .otw .w{grid-template-columns:1fr;grid-template-areas:"tyt" "foto" "reszta";row-gap:28px}
+  .foto{display:block;align-self:auto}
+  .foto img{height:auto;min-height:0;aspect-ratio:4/5}
+}
+@media (max-width:760px){
+  .otw{padding-block:0 clamp(26px,6vw,38px)}
+  .otw .w{grid-template-areas:"foto" "reszta";row-gap:0;padding-inline:0}
+  .foto{position:relative}
+  .foto img{aspect-ratio:4/5}
+  .foto::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(180deg,rgba(9,12,15,0) 26%,rgba(9,12,15,.36) 56%,rgba(9,12,15,.9) 100%)}
+  .tyt{grid-area:foto;align-self:end;position:relative;z-index:2;
+    padding:0 clamp(20px,5vw,28px) 26px}
+  .tyt .meta{color:#8FC0D6}
+  .reszta{padding:28px clamp(20px,5vw,28px) 0}
+  .podpis{display:none}
+}
 .otw h1{font-size:clamp(36px,5.5vw,70px);margin:16px 0 0}
+@media (max-width:760px){.otw h1{color:#F8F8F6;font-size:clamp(30px,8vw,42px);margin:12px 0 0}
+  .otw h1 span{color:#8FC0D6}}
 .otw h1 span{color:var(--stal)}
 .otw .pod{margin:24px 0 0;max-width:40ch;color:var(--kamien);font-size:clamp(15px,1.6vw,17px)}
 .fakty{margin-top:32px;border-top:1px solid var(--linia)}
@@ -73,8 +98,6 @@ h1,h2,h3{font-family:Archivo,system-ui,sans-serif;font-weight:800;margin:0;line-
 .fakty dt{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--stal);font-family:Archivo,sans-serif;font-weight:600}
 .fakty dd{margin:0;font-size:15.5px}
 .fakty a{text-decoration:none;border-bottom:1px solid var(--stal)}
-.otw figure{margin:0}
-.otw figure img{width:100%;aspect-ratio:4/5;object-fit:cover}
 .podpis{margin-top:10px;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--kamien)}
 
 .pas img{width:100vw;margin-left:calc(50% - 50vw);aspect-ratio:21/9;object-fit:cover}
@@ -169,10 +192,18 @@ footer a{color:#D3DAE0}
 </div></header>
 
 <section class="otw"><div class="w">
-  <div>
-    <div class="meta up d1">Czarna Góra &middot; Stronie Śląskie &middot; Masyw Śnieżnika</div>
-    <h1 class="up d2">Osiem apartamentów.<br><span>Żadnych dwóch</span><br>takich samych.</h1>
-    <p class="pod up d3">Rustykalny z drewnem i lnianymi firanami. Pop-Art z czerwoną kuchnią. Zen, Art Deco, Kolonialny. Wybieracie nie pokój, tylko wnętrze, w którym chcecie się obudzić.</p>
+  <figure class="foto up d1">
+    <img src="img/dom-900.webp" srcset="img/dom-560.webp 560w, img/dom-900.webp 852w"
+         sizes="(max-width:900px) 100vw, 43vw" width="852" height="1066"
+         alt="Dom na Wzgórzu widziany z zewnątrz" fetchpriority="high">
+    <div class="podpis">Dom na zboczu, Stronie Śląskie</div>
+  </figure>
+  <div class="tyt">
+    <div class="meta up d2">Czarna Góra &middot; Stronie Śląskie &middot; Masyw Śnieżnika</div>
+    <h1 class="up d3">Osiem apartamentów.<br><span>Żadnych dwóch</span><br>takich samych.</h1>
+  </div>
+  <div class="reszta">
+    <p class="pod up d4">Rustykalny z drewnem i lnianymi firanami. Pop-Art z czerwoną kuchnią. Zen, Art Deco, Kolonialny. Wybieracie nie pokój, tylko wnętrze, w którym chcecie się obudzić.</p>
     <dl class="fakty up d4">
       <div><dt>Pojemność</dt><dd class="num">od 2 do 6 osób w apartamencie</dd></div>
       <div><dt>Do lasu</dt><dd class="num">200 metrów od furtki</dd></div>
@@ -181,12 +212,6 @@ footer a{color:#D3DAE0}
       <div><dt>Rezerwacje</dt><dd><a href="tel:+48512078015">512 078 015</a></dd></div>
     </dl>
   </div>
-  <figure class="up d3">
-    <img src="img/dom-900.webp" srcset="img/dom-560.webp 560w, img/dom-900.webp 852w"
-         sizes="(max-width:900px) 100vw, 45vw" width="852" height="1066"
-         alt="Dom na Wzgórzu widziany z zewnątrz" fetchpriority="high">
-    <div class="podpis">Dom na zboczu, Stronie Śląskie</div>
-  </figure>
 </div></section>
 
 <section class="apart" id="apartamenty"><div class="w">
@@ -306,7 +331,7 @@ footer a{color:#D3DAE0}
  var el=document.getElementById('waga'),last=0;
  function zmierz(){try{
    var n=performance.getEntriesByType('navigation')[0],r=performance.getEntriesByType('resource'),b=(n&&(n.encodedBodySize||n.transferSize))||0;
-   for(var i=0;i<r.length;i++)b+=r[i].encodedBodySize||r[i].transferSize||0;
+   var wid={};for(var i=0;i<r.length;i++){var k=r[i].name.split('?')[0];if(wid[k])continue;wid[k]=1;b+=r[i].encodedBodySize||r[i].transferSize||0;}
    var ms=n?Math.round(n.domContentLoadedEventEnd):Math.round(performance.now());
    if(b>last){last=b;el.textContent='wczytane '+Math.round(b/1024)+' KB / '+ms+' ms';}
  }catch(e){}}
