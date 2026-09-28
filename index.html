@@ -35,7 +35,7 @@ h1,h2,h3{font-family:Archivo,system-ui,sans-serif;font-weight:800;margin:0;line-
 
 .top{border-bottom:1px solid var(--linia)}
 .top .w{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-block:18px}
-.marka{font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(17px,2vw,20px);letter-spacing:-.05em}
+.marka{font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(17px,2vw,20px);letter-spacing:-.025em}
 .marka span{color:var(--stal)}
 .top nav{display:flex;gap:clamp(14px,2.2vw,28px);font-size:14px;align-items:center;flex-wrap:wrap}
 .top nav a{text-decoration:none;color:var(--kamien);transition:color .18s}
@@ -62,9 +62,9 @@ h1,h2,h3{font-family:Archivo,system-ui,sans-serif;font-weight:800;margin:0;line-
 
 /* otwarcie */
 .otw{padding-block:clamp(36px,5.5vw,80px)}
-.otw .w{display:grid;grid-template-columns:1.06fr .94fr;gap:clamp(28px,5vw,70px);align-items:end}
+.otw .w{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(28px,5vw,70px);align-items:end}
 @media (max-width:900px){.otw .w{grid-template-columns:1fr;gap:30px;align-items:start}}
-.otw h1{font-size:clamp(40px,7.6vw,92px);margin:16px 0 0}
+.otw h1{font-size:clamp(36px,5.5vw,70px);margin:16px 0 0}
 .otw h1 span{color:var(--stal)}
 .otw .pod{margin:24px 0 0;max-width:40ch;color:var(--kamien);font-size:clamp(15px,1.6vw,17px)}
 .fakty{margin-top:32px;border-top:1px solid var(--linia)}
@@ -98,7 +98,7 @@ h1,h2,h3{font-family:Archivo,system-ui,sans-serif;font-weight:800;margin:0;line-
 .siatka{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.6vw,20px)}
 @media (max-width:1040px){.siatka{grid-template-columns:repeat(3,1fr)}}
 @media (max-width:760px){.siatka{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:440px){.siatka{grid-template-columns:1fr}}
+@media (max-width:359px){.siatka{grid-template-columns:1fr}}
 .ap{background:transparent;transition:opacity .28s var(--eo)}
 .ap[data-off="1"]{opacity:.22}
 .ap figure{margin:0;overflow:hidden;background:var(--linia)}
@@ -204,14 +204,14 @@ footer a{color:#D3DAE0}
   </div>
 
   <div class="siatka">
-    <article class="ap" data-min="4" data-max="6"><figure><img src="img/rustykalny-760.webp" srcset="img/rustykalny-420.webp 420w, img/rustykalny-760.webp 760w" sizes="(max-width:440px) 100vw,(max-width:760px) 50vw,(max-width:1040px) 33vw, 24vw" width="760" height="570" loading="lazy" alt="Apartament Rustykalny"></figure><div class="ap-t"><h3>Rustykalny</h3><span class="nr">01</span></div><div class="os num">4-6 osób</div></article>
-    <article class="ap" data-min="4" data-max="6"><figure><img src="img/romantyczny-760.webp" srcset="img/romantyczny-420.webp 420w, img/romantyczny-760.webp 760w" sizes="(max-width:440px) 100vw,(max-width:760px) 50vw,(max-width:1040px) 33vw, 24vw" width="760" height="570" loading="lazy" alt="Apartament Romantyczny"></figure><div class="ap-t"><h3>Romantyczny</h3><span class="nr">02</span></div><div class="os num">4-6 osób</div></article>
-    <article class="ap" data-min="4" data-max="6"><figure><img src="img/klasyczny-760.webp" srcset="img/klasyczny-420.webp 420w, img/klasyczny-760.webp 760w" sizes="(max-width:440px) 100vw,(max-width:760px) 50vw,(max-width:1040px) 33vw, 24vw" width="760" height="570" loading="lazy" alt="Apartament Klasyczny"></figure><div class="ap-t"><h3>Klasyczny</h3><span class="nr">03</span></div><div class="os num">4-6 osób</div></article>
-    <article class="ap" data-min="4" data-max="6"><figure><img src="img/zen-760.webp" srcset="img/zen-420.webp 420w, img/zen-760.webp 760w" sizes="(max-width:440px) 100vw,(max-width:760px) 50vw,(max-width:1040px) 33vw, 24vw" width="760" height="570" loading="lazy" alt="Apartament Zen"></figure><div class="ap-t"><h3>Zen</h3><span class="nr">04</span></div><div class="os num">4-6 osób</div></article>
-    <article class="ap" data-min="4" data-max="4"><figure><img src="img/artdeco-760.webp" srcset="img/artdeco-420.webp 420w, img/artdeco-760.webp 760w" sizes="(max-width:440px) 100vw,(max-width:760px) 50vw,(max-width:1040px) 33vw, 24vw" width="760" height="570" loading="lazy" alt="Apartament Art Deco"></figure><div class="ap-t"><h3>Art Deco</h3><span class="nr">05</span></div><div class="os num">4 osoby</div></article>
-    <article class="ap" data-min="3" data-max="4"><figure><img src="img/modern-760.webp" srcset="img/modern-420.webp 420w, img/modern-760.webp 760w" sizes="(max-width:440px) 100vw,(max-width:760px) 50vw,(max-width:1040px) 33vw, 24vw" width="760" height="570" loading="lazy" alt="Apartament Modern"></figure><div class="ap-t"><h3>Modern</h3><span class="nr">06</span></div><div class="os num">3-4 osoby</div></article>
-    <article class="ap" data-min="2" data-max="2"><figure><img src="img/kolonialny-760.webp" srcset="img/kolonialny-420.webp 420w, img/kolonialny-760.webp 760w" sizes="(max-width:440px) 100vw,(max-width:760px) 50vw,(max-width:1040px) 33vw, 24vw" width="760" height="570" loading="lazy" alt="Apartament Kolonialny"></figure><div class="ap-t"><h3>Kolonialny</h3><span class="nr">07</span></div><div class="os num">2 osoby</div></article>
-    <article class="ap" data-min="2" data-max="2"><figure><img src="img/popart-760.webp" srcset="img/popart-420.webp 420w, img/popart-760.webp 760w" sizes="(max-width:440px) 100vw,(max-width:760px) 50vw,(max-width:1040px) 33vw, 24vw" width="760" height="570" loading="lazy" alt="Apartament Pop-Art"></figure><div class="ap-t"><h3>Pop-Art</h3><span class="nr">08</span></div><div class="os num">2 osoby</div></article>
+    <article class="ap" data-min="4" data-max="6"><figure><img src="img/rustykalny-760.webp" srcset="img/rustykalny-420.webp 420w, img/rustykalny-760.webp 760w" sizes="(max-width:760px) 50vw,(max-width:1040px) 33vw, 24vw" width="760" height="570" loading="lazy" alt="Apartament Rustykalny"></figure><div class="ap-t"><h3>Rustykalny</h3><span class="nr">01</span></div><div class="os num">4-6 osób</div></article>
+    <article class="ap" data-min="4" data-max="6"><figure><img src="img/romantyczny-760.webp" srcset="img/romantyczny-420.webp 420w, img/romantyczny-760.webp 760w" sizes="(max-width:760px) 50vw,(max-width:1040px) 33vw, 24vw" width="760" height="570" loading="lazy" alt="Apartament Romantyczny"></figure><div class="ap-t"><h3>Romantyczny</h3><span class="nr">02</span></div><div class="os num">4-6 osób</div></article>
+    <article class="ap" data-min="4" data-max="6"><figure><img src="img/klasyczny-760.webp" srcset="img/klasyczny-420.webp 420w, img/klasyczny-760.webp 760w" sizes="(max-width:760px) 50vw,(max-width:1040px) 33vw, 24vw" width="760" height="570" loading="lazy" alt="Apartament Klasyczny"></figure><div class="ap-t"><h3>Klasyczny</h3><span class="nr">03</span></div><div class="os num">4-6 osób</div></article>
+    <article class="ap" data-min="4" data-max="6"><figure><img src="img/zen-760.webp" srcset="img/zen-420.webp 420w, img/zen-760.webp 760w" sizes="(max-width:760px) 50vw,(max-width:1040px) 33vw, 24vw" width="760" height="570" loading="lazy" alt="Apartament Zen"></figure><div class="ap-t"><h3>Zen</h3><span class="nr">04</span></div><div class="os num">4-6 osób</div></article>
+    <article class="ap" data-min="4" data-max="4"><figure><img src="img/artdeco-760.webp" srcset="img/artdeco-420.webp 420w, img/artdeco-760.webp 760w" sizes="(max-width:760px) 50vw,(max-width:1040px) 33vw, 24vw" width="760" height="570" loading="lazy" alt="Apartament Art Deco"></figure><div class="ap-t"><h3>Art Deco</h3><span class="nr">05</span></div><div class="os num">4 osoby</div></article>
+    <article class="ap" data-min="3" data-max="4"><figure><img src="img/modern-760.webp" srcset="img/modern-420.webp 420w, img/modern-760.webp 760w" sizes="(max-width:760px) 50vw,(max-width:1040px) 33vw, 24vw" width="760" height="570" loading="lazy" alt="Apartament Modern"></figure><div class="ap-t"><h3>Modern</h3><span class="nr">06</span></div><div class="os num">3-4 osoby</div></article>
+    <article class="ap" data-min="2" data-max="2"><figure><img src="img/kolonialny-760.webp" srcset="img/kolonialny-420.webp 420w, img/kolonialny-760.webp 760w" sizes="(max-width:760px) 50vw,(max-width:1040px) 33vw, 24vw" width="760" height="570" loading="lazy" alt="Apartament Kolonialny"></figure><div class="ap-t"><h3>Kolonialny</h3><span class="nr">07</span></div><div class="os num">2 osoby</div></article>
+    <article class="ap" data-min="2" data-max="2"><figure><img src="img/popart-760.webp" srcset="img/popart-420.webp 420w, img/popart-760.webp 760w" sizes="(max-width:760px) 50vw,(max-width:1040px) 33vw, 24vw" width="760" height="570" loading="lazy" alt="Apartament Pop-Art"></figure><div class="ap-t"><h3>Pop-Art</h3><span class="nr">08</span></div><div class="os num">2 osoby</div></article>
   </div>
   <p class="pusto" id="pusto" hidden>Dla tej liczby osób łączymy apartamenty - najlepiej zadzwonić: <a href="tel:+48512078015">512 078 015</a></p>
 </div></section>
