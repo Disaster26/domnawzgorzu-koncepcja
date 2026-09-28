@@ -80,16 +80,17 @@ h1,h2,h3{font-family:Archivo,system-ui,sans-serif;font-weight:800;margin:0;line-
   .foto{position:relative}
   .foto img{aspect-ratio:4/5}
   .foto::after{content:"";position:absolute;inset:0;pointer-events:none;
-    background:linear-gradient(180deg,rgba(9,12,15,0) 26%,rgba(9,12,15,.36) 56%,rgba(9,12,15,.9) 100%)}
+    background:linear-gradient(180deg,rgba(9,12,15,0) 18%,rgba(9,12,15,.32) 44%,rgba(9,12,15,.74) 64%,rgba(9,12,15,.94) 84%,rgba(9,12,15,.97) 100%)}
   .tyt{grid-area:foto;align-self:end;position:relative;z-index:2;
-    padding:0 clamp(20px,5vw,28px) 26px}
-  .tyt .meta{color:#8FC0D6}
+    padding:0 clamp(20px,5vw,28px) 30px}
+  .tyt .meta{color:#A8D3E6;text-shadow:0 1px 18px rgba(9,12,15,.6)}
   .reszta{padding:28px clamp(20px,5vw,28px) 0}
   .podpis{display:none}
 }
 .otw h1{font-size:clamp(36px,5.5vw,70px);margin:16px 0 0}
-@media (max-width:760px){.otw h1{color:#F8F8F6;font-size:clamp(30px,8vw,42px);margin:12px 0 0}
-  .otw h1 span{color:#8FC0D6}}
+@media (max-width:760px){.otw h1{color:#F8F8F6;font-size:clamp(30px,8vw,42px);margin:12px 0 0;
+    text-shadow:0 2px 26px rgba(9,12,15,.7)}
+  .otw h1 span{color:#A8D3E6}}
 .otw h1 span{color:var(--stal)}
 .otw .pod{margin:24px 0 0;max-width:40ch;color:var(--kamien);font-size:clamp(15px,1.6vw,17px)}
 .fakty{margin-top:32px;border-top:1px solid var(--linia)}
