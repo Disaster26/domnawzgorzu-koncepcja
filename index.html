@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Dom na Wzgórzu - osiem apartamentów, Czarna Góra, Stronie Śląskie</title>
+<meta name="description" content="Osiem apartamentów w Masywie Śnieżnika. Czarna Góra, Stronie Śląskie. Do lasu 200 metrów, wyciągi i trasy biegowe w pobliżu. Tel. 512 078 015.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=Karla:wght@300;400;500&display=swap">
+<style>
+:root{
+  --atr:#12161A; --noc:#090C0F; --snieg:#F8F8F6; --plotno:#EFEFEB; --biel:#FFFFFF;
+  --kamien:#6B7480; --linia:#E0E0DA; --stal:#3A6B84; --stal-j:#5C93AF;
+  --eo:cubic-bezier(.23,1,.32,1);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--snieg);color:var(--atr);
+  font-family:Karla,system-ui,-apple-system,Segoe UI,sans-serif;font-weight:400;
+  font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.w{width:100%;max-width:1280px;margin:0 auto;padding-inline:clamp(20px,4vw,48px)}
+h1,h2,h3{font-family:Archivo,system-ui,sans-serif;font-weight:800;margin:0;line-height:1;
+  letter-spacing:-.04em;text-wrap:balance}
+.meta{font-family:Archivo,sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--stal)}
+.num{font-variant-numeric:tabular-nums}
+
+.demo{background:var(--noc);color:#9AA3AC;font-size:12px}
+.demo .w{display:flex;gap:12px;justify-content:space-between;align-items:center;flex-wrap:wrap;padding-block:9px}
+.demo b{color:#8FC0D6;font-weight:600}
+
+.top{border-bottom:1px solid var(--linia)}
+.top .w{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-block:18px}
+.marka{font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(17px,2vw,20px);letter-spacing:-.05em}
+.marka span{color:var(--stal)}
+.top nav{display:flex;gap:clamp(14px,2.2vw,28px);font-size:14px;align-items:center;flex-wrap:wrap}
+.top nav a{text-decoration:none;color:var(--kamien);transition:color .18s}
+@media (hover:hover){.top nav a:hover{color:var(--atr)}}
+.tel{border:1px solid var(--atr);padding:9px 16px;font-size:13.5px;font-weight:500;text-decoration:none;
+  transition:transform .16s var(--eo),background .2s,color .2s}
+.tel:active{transform:scale(.975)}
+@media (hover:hover){.tel:hover{background:var(--atr);color:var(--snieg)}}
+
+/* otwarcie */
+.otw{padding-block:clamp(36px,5.5vw,80px)}
+.otw .w{display:grid;grid-template-columns:1.06fr .94fr;gap:clamp(28px,5vw,70px);align-items:end}
+@media (max-width:900px){.otw .w{grid-template-columns:1fr;gap:30px;align-items:start}}
+.otw h1{font-size:clamp(40px,7.6vw,92px);margin:16px 0 0}
+.otw h1 span{color:var(--stal)}
+.otw .pod{margin:24px 0 0;max-width:40ch;color:var(--kamien);font-size:clamp(15px,1.6vw,17px)}
+.fakty{margin-top:32px;border-top:1px solid var(--linia)}
+.fakty div{display:grid;grid-template-columns:130px 1fr;gap:14px;padding-block:13px;
+  border-bottom:1px solid var(--linia);align-items:baseline}
+.fakty dt{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--stal);font-family:Archivo,sans-serif;font-weight:600}
+.fakty dd{margin:0;font-size:15.5px}
+.fakty a{text-decoration:none;border-bottom:1px solid var(--stal)}
+.otw figure{margin:0}
+.otw figure img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.podpis{margin-top:10px;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--kamien)}
+
+.pas img{width:100vw;margin-left:calc(50% - 50vw);aspect-ratio:21/9;object-fit:cover}
+@media (max-width:700px){.pas img{aspect-ratio:3/2}}
+
+/* indeks apartamentow */
+.apart{padding-block:clamp(44px,6.5vw,92px);background:var(--plotno);border-block:1px solid var(--linia)}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:26px;flex-wrap:wrap;margin-bottom:30px}
+.head h2{font-size:clamp(30px,4.6vw,54px)}
+.head p{margin:10px 0 0;color:var(--kamien);max-width:42ch;font-size:15px}
+.filtr{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.filtr span.et{font-size:13px;color:var(--kamien);margin-right:4px}
+.chip{border:1px solid var(--linia);background:var(--biel);color:var(--atr);padding:8px 15px;
+  font-family:Karla,sans-serif;font-size:14px;font-weight:500;cursor:pointer;
+  transition:transform .15s var(--eo),background .18s,color .18s,border-color .18s}
+.chip:active{transform:scale(.975)}
+.chip[aria-pressed="true"]{background:var(--atr);color:var(--snieg);border-color:var(--atr)}
+@media (hover:hover){.chip:hover{border-color:var(--stal)}}
+.chip:focus-visible{outline:2px solid var(--stal);outline-offset:2px}
+
+.siatka{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.6vw,20px)}
+@media (max-width:1040px){.siatka{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:760px){.siatka{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:440px){.siatka{grid-template-columns:1fr}}
+.ap{background:transparent;transition:opacity .28s var(--eo)}
+.ap[data-off="1"]{opacity:.22}
+.ap figure{margin:0;overflow:hidden;background:var(--linia)}
+.ap img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .7s var(--eo)}
+@media (hover:hover){.ap:hover img{transform:scale(1.045)}}
+.ap-t{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding-top:11px}
+.ap h3{font-size:clamp(16px,1.7vw,19px);letter-spacing:-.035em}
+.ap .nr{font-family:Archivo,sans-serif;font-size:11px;font-weight:700;color:var(--stal);letter-spacing:.06em}
+.ap .os{font-size:13.5px;color:var(--kamien);padding-top:3px}
+.pusto{margin-top:22px;font-size:15px;color:var(--kamien)}
+.pusto a{color:var(--stal);font-weight:500}
+
+/* sezon */
+.sezon{background:var(--noc);color:#C7CED4;padding-block:clamp(44px,6vw,88px)}
+.sezon h2{color:#F8F8F6}
+.sezon .head p{color:#8C97A1}
+.sezon .meta{color:#8FC0D6}
+.przel{display:inline-flex;border:1px solid rgba(143,192,214,.32);padding:4px;gap:4px}
+.przel button{border:0;background:transparent;color:#A9B4BD;padding:9px 22px;font-size:14px;font-weight:500;
+  cursor:pointer;font-family:Karla,sans-serif;transition:transform .15s var(--eo),background .2s,color .2s}
+.przel button:active{transform:scale(.975)}
+.przel button[aria-pressed="true"]{background:#8FC0D6;color:#08131A}
+.przel button:focus-visible{outline:2px solid #8FC0D6;outline-offset:2px}
+.atr-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(143,192,214,.18);
+  margin-top:28px;transition:opacity .2s var(--eo)}
+@media (max-width:900px){.atr-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:460px){.atr-grid{grid-template-columns:1fr}}
+.atr{background:var(--noc);padding:22px 20px}
+.atr b{display:block;font-family:Archivo,sans-serif;font-weight:700;font-size:17px;color:#F8F8F6;
+  margin-bottom:6px;letter-spacing:-.03em}
+.atr span{font-size:14px;color:#8C97A1}
+
+footer{background:var(--atr);color:#9AA3AC;padding-block:clamp(38px,5vw,62px);font-size:14.5px}
+footer .w{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:30px}
+@media (max-width:820px){footer .w{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){footer .w{grid-template-columns:1fr}}
+footer h3{font-size:22px;color:#F8F8F6;margin-bottom:12px;letter-spacing:-.04em}
+footer h4{font-family:Archivo,sans-serif;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:#8FC0D6;font-weight:600;margin:0 0 10px}
+footer p{margin:0 0 5px}
+footer a{color:#D3DAE0}
+.fdol{border-top:1px solid rgba(143,192,214,.18);margin-top:32px;padding-top:18px;font-size:12px;color:#6A737C}
+
+.up{opacity:0;transform:translateY(14px);animation:up .6s var(--eo) forwards}
+@keyframes up{to{opacity:1;transform:none}}
+.d1{animation-delay:.05s}.d2{animation-delay:.13s}.d3{animation-delay:.21s}.d4{animation-delay:.29s}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  .up{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div class="demo"><div class="w">
+  <span><b>Szkic / demo</b> &mdash; propozycja nowej strony dla Domu na Wzgórzu</span>
+  <span class="num" id="waga"></span>
+</div></div>
+
+<header class="top"><div class="w">
+  <div class="marka">Dom na <span>Wzgórzu</span></div>
+  <nav>
+    <a href="#apartamenty">Apartamenty</a>
+    <a href="#okolica">Okolica</a>
+    <a class="tel" href="tel:+48512078015">512 078 015</a>
+  </nav>
+</div></header>
+
+<section class="otw"><div class="w">
+  <div>
+    <div class="meta up d1">Czarna Góra &middot; Stronie Śląskie &middot; Masyw Śnieżnika</div>
+    <h1 class="up d2">Osiem apartamentów.<br><span>Żadnych dwóch</span><br>takich samych.</h1>
+    <p class="pod up d3">Rustykalny z drewnem i lnianymi firanami. Pop-Art z czerwoną kuchnią. Zen, Art Deco, Kolonialny. Wybieracie nie pokój, tylko wnętrze, w którym chcecie się obudzić.</p>
+    <dl class="fakty up d4">
+      <div><dt>Pojemność</dt><dd class="num">od 2 do 6 osób w apartamencie</dd></div>
+      <div><dt>Do lasu</dt><dd class="num">200 metrów od furtki</dd></div>
+      <div><dt>Wyróżnienia</dt><dd>Dwukrotnie najpiękniejsza posesja w gminie</dd></div>
+      <div><dt>Rezerwacje</dt><dd><a href="tel:+48512078015">512 078 015</a></dd></div>
+    </dl>
+  </div>
+  <figure class="up d3">
+    <img src="img/dom-900.webp" srcset="img/dom-560.webp 560w, img/dom-900.webp 852w"
+         sizes="(max-width:900px) 100vw, 45vw" width="852" height="1066"
+         alt="Dom na Wzgórzu widziany z zewnątrz" fetchpriority="high">
+    <div class="podpis">Dom na zboczu, Stronie Śląskie</div>
+  </figure>
+</div></section>
+
+<section class="apart" id="apartamenty"><div class="w">
+  <div class="head">
+    <div>
+      <div class="meta">Indeks apartamentów</div>
+      <h2>Ile Was przyjedzie?</h2>
+      <p>Kliknijcie liczbę osób. Zostaną tylko te apartamenty, w których się zmieścicie.</p>
+    </div>
+    <div class="filtr" role="group" aria-label="Filtr liczby osób">
+      <span class="et">Osób:</span>
+      <button class="chip" type="button" data-n="0" aria-pressed="true">Wszystkie</button>
+      <button class="chip" type="button" data-n="2" aria-pressed="false">2</button>
+      <button class="chip" type="button" data-n="3" aria-pressed="false">3</button>
+      <button class="chip" type="button" data-n="4" aria-pressed="false">4</button>
+      <button class="chip" type="button" data-n="5" aria-pressed="false">5</button>
+      <button class="chip" type="button" data-n="6" aria-pressed="false">6</button>
+    </div>
+  </div>
+
+  <div class="siatka">
+    <article class="ap" data-min="4" data-max="6"><figure><img src="img/rustykalny-760.webp" srcset="img/rustykalny-420.webp 420w, img/rustykalny-760.webp 760w" sizes="(max-width:440px) 100vw,(max-width:760px) 50vw,(max-width:1040px) 33vw, 24vw" width="760" height="570" loading="lazy" alt="Apartament Rustykalny"></figure><div class="ap-t"><h3>Rustykalny</h3><span class="nr">01</span></div><div class="os num">4&ndash;6 osób</div></article>
+    <article class="ap" data-min="4" data-max="6"><figure><img src="img/romantyczny-760.webp" srcset="img/romantyczny-420.webp 420w, img/romantyczny-760.webp 760w" sizes="(max-width:440px) 100vw,(max-width:760px) 50vw,(max-width:1040px) 33vw, 24vw" width="760" height="570" loading="lazy" alt="Apartament Romantyczny"></figure><div class="ap-t"><h3>Romantyczny</h3><span class="nr">02</span></div><div class="os num">4&ndash;6 osób</div></article>
+    <article class="ap" data-min="4" data-max="6"><figure><img src="img/klasyczny-760.webp" srcset="img/klasyczny-420.webp 420w, img/klasyczny-760.webp 760w" sizes="(max-width:440px) 100vw,(max-width:760px) 50vw,(max-width:1040px) 33vw, 24vw" width="760" height="570" loading="lazy" alt="Apartament Klasyczny"></figure><div class="ap-t"><h3>Klasyczny</h3><span class="nr">03</span></div><div class="os num">4&ndash;6 osób</div></article>
+    <article class="ap" data-min="4" data-max="6"><figure><img src="img/zen-760.webp" srcset="img/zen-420.webp 420w, img/zen-760.webp 760w" sizes="(max-width:440px) 100vw,(max-width:760px) 50vw,(max-width:1040px) 33vw, 24vw" width="760" height="570" loading="lazy" alt="Apartament Zen"></figure><div class="ap-t"><h3>Zen</h3><span class="nr">04</span></div><div class="os num">4&ndash;6 osób</div></article>
+    <article class="ap" data-min="4" data-max="4"><figure><img src="img/artdeco-760.webp" srcset="img/artdeco-420.webp 420w, img/artdeco-760.webp 760w" sizes="(max-width:440px) 100vw,(max-width:760px) 50vw,(max-width:1040px) 33vw, 24vw" width="760" height="570" loading="lazy" alt="Apartament Art Deco"></figure><div class="ap-t"><h3>Art Deco</h3><span class="nr">05</span></div><div class="os num">4 osoby</div></article>
+    <article class="ap" data-min="3" data-max="4"><figure><img src="img/modern-760.webp" srcset="img/modern-420.webp 420w, img/modern-760.webp 760w" sizes="(max-width:440px) 100vw,(max-width:760px) 50vw,(max-width:1040px) 33vw, 24vw" width="760" height="570" loading="lazy" alt="Apartament Modern"></figure><div class="ap-t"><h3>Modern</h3><span class="nr">06</span></div><div class="os num">3&ndash;4 osoby</div></article>
+    <article class="ap" data-min="2" data-max="2"><figure><img src="img/kolonialny-760.webp" srcset="img/kolonialny-420.webp 420w, img/kolonialny-760.webp 760w" sizes="(max-width:440px) 100vw,(max-width:760px) 50vw,(max-width:1040px) 33vw, 24vw" width="760" height="570" loading="lazy" alt="Apartament Kolonialny"></figure><div class="ap-t"><h3>Kolonialny</h3><span class="nr">07</span></div><div class="os num">2 osoby</div></article>
+    <article class="ap" data-min="2" data-max="2"><figure><img src="img/popart-760.webp" srcset="img/popart-420.webp 420w, img/popart-760.webp 760w" sizes="(max-width:440px) 100vw,(max-width:760px) 50vw,(max-width:1040px) 33vw, 24vw" width="760" height="570" loading="lazy" alt="Apartament Pop-Art"></figure><div class="ap-t"><h3>Pop-Art</h3><span class="nr">08</span></div><div class="os num">2 osoby</div></article>
+  </div>
+  <p class="pusto" id="pusto" hidden>Dla tej liczby osób łączymy apartamenty &mdash; najlepiej zadzwonić: <a href="tel:+48512078015">512 078 015</a></p>
+</div></section>
+
+<div class="pas">
+  <img src="img/pas-1600.webp" srcset="img/pas-900.webp 900w, img/pas-1600.webp 1600w"
+       sizes="100vw" width="1600" height="686" loading="lazy" alt="Dom na Wzgórzu i okolica">
+</div>
+
+<section class="sezon" id="okolica"><div class="w">
+  <div class="head">
+    <div>
+      <div class="meta">Okolica</div>
+      <h2>To samo miejsce,<br>dwa różne pobyty</h2>
+      <p>Strona pokazuje to, co akurat jest w sezonie. Gość nie musi się domyślać, po co przyjechać w lutym, a po co w lipcu.</p>
+    </div>
+    <div class="przel" role="group" aria-label="Wybór sezonu">
+      <button type="button" data-s="zima" aria-pressed="true">Zima</button>
+      <button type="button" data-s="lato" aria-pressed="false">Lato</button>
+    </div>
+  </div>
+  <div class="atr-grid" id="atr"></div>
+</div></section>
+
+<footer><div class="w">
+  <div>
+    <h3>Dom na Wzgórzu</h3>
+    <p>Apartamenty, Czarna Góra</p>
+    <p>Stronie Śląskie</p>
+    <p>Masyw Śnieżnika</p>
+    <p style="margin-top:12px"><a href="tel:+48512078015">512 078 015</a></p>
+    <p><a href="tel:+48748115451">74 811 54 51</a></p>
+    <p><a href="mailto:info@domnawzgorzu.pl">info@domnawzgorzu.pl</a></p>
+  </div>
+  <div>
+    <h4>Apartamenty</h4>
+    <p>Rustykalny &middot; Romantyczny</p>
+    <p>Klasyczny &middot; Zen</p>
+    <p>Art Deco &middot; Modern</p>
+    <p>Kolonialny &middot; Pop-Art</p>
+  </div>
+  <div>
+    <h4>W pobliżu</h4>
+    <p>Wyciągi Czarna Góra</p>
+    <p>Jaskinia Niedźwiedzia</p>
+    <p>Kopalnia Złota, Złoty Stok</p>
+    <p>Zalew w Stroniu</p>
+  </div>
+  <div class="fdol" style="grid-column:1/-1">
+    Szkic przygotowany przez Łukasza Stasiaka. Zdjęcia pochodzą z obecnej strony domnawzgorzu.pl.
+  </div>
+</div></footer>
+
+<script>
+(function(){
+ var ch=[].slice.call(document.querySelectorAll('.chip')),
+     k=[].slice.call(document.querySelectorAll('.ap')),
+     pu=document.getElementById('pusto');
+ function fil(n){var v=0;k.forEach(function(x){
+   var a=+x.getAttribute('data-min'),b=+x.getAttribute('data-max'),ok=n===0||(n>=a&&n<=b);
+   x.setAttribute('data-off',ok?'0':'1');if(ok)v++;});pu.hidden=v>0;}
+ ch.forEach(function(c){c.addEventListener('click',function(){
+   ch.forEach(function(y){y.setAttribute('aria-pressed','false');});
+   c.setAttribute('aria-pressed','true');fil(+c.getAttribute('data-n'));});});
+ fil(0);
+
+ var dane={zima:[['Wyciągi Czarna Góra','Stok kilka minut autem od domu.'],
+   ['Narty biegowe','Trasy Gór Bialskich i Masywu Śnieżnika.'],
+   ['Jaskinia Niedźwiedzia','Czynna cały rok, warto rezerwować.'],
+   ['Basen w Stroniu','Kiedy na dworze za zimno na spacer.']],
+  lato:[['Zalew i plaża','Woda i leżaki w Stroniu Śląskim.'],
+   ['Trasy rowerowe','Wypożyczalnia rowerów na miejscu.'],
+   ['Szlaki piesze','Do lasu dwieście metrów od furtki.'],
+   ['Ogród Bajek','Klasyka, gdy jedziecie z dziećmi.']]};
+ var box=document.getElementById('atr'),bs=[].slice.call(document.querySelectorAll('.przel button'));
+ function rys(s){return dane[s].map(function(a){
+   return '<div class="atr"><b>'+a[0]+'</b><span>'+a[1]+'</span></div>';}).join('');}
+ bs.forEach(function(b){b.addEventListener('click',function(){
+   bs.forEach(function(y){y.setAttribute('aria-pressed','false');});
+   b.setAttribute('aria-pressed','true');
+   box.style.opacity='0';
+   setTimeout(function(){box.innerHTML=rys(b.getAttribute('data-s'));box.style.opacity='1';},160);});});
+ box.innerHTML=rys('zima');
+
+ function zmierz(){try{
+   var n=performance.getEntriesByType('navigation')[0],r=performance.getEntriesByType('resource'),b=(n&&n.transferSize)||0;
+   for(var i=0;i<r.length;i++)b+=r[i].transferSize||0;
+   var ms=n?Math.round(n.domContentLoadedEventEnd):Math.round(performance.now());
+   if(b>0)document.getElementById('waga').textContent=Math.round(b/1024)+' KB / '+ms+' ms';
+ }catch(e){}}
+ if(document.readyState==='complete')setTimeout(zmierz,500);
+ else addEventListener('load',function(){setTimeout(zmierz,500);});
+})();
+</script>
+</body>
+</html>
